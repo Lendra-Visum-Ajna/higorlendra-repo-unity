@@ -585,6 +585,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &673096790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673096791}
+  m_Layer: 0
+  m_Name: DamagePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673096791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673096790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1039147478}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &967900355
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +756,7 @@ GameObject:
   - component: {fileID: 1039147479}
   - component: {fileID: 1039147481}
   - component: {fileID: 1039147482}
+  - component: {fileID: 1039147483}
   m_Layer: 0
   m_Name: Nexus
   m_TagString: Finish
@@ -746,6 +777,7 @@ Transform:
   m_Children:
   - {fileID: 1333821661}
   - {fileID: 967900356}
+  - {fileID: 673096791}
   m_Father: {fileID: 1016228624}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -821,6 +853,23 @@ MonoBehaviour:
   healthUIPrefab: {fileID: 5405411872678089306, guid: cac7f491449dc2245820acb02f0d9517,
     type: 3}
   healthPosition: {fileID: 967900356}
+--- !u!114 &1039147483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039147477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad9d85f10591cd44a47ebc6553f46c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSound: splash-hit2
+  dieSound: splash-death1
+  damageEffects: {fileID: 3577498166441108409, guid: 416104e238f3e3a4782bb8574b6280df,
+    type: 3}
+  dieEffects: {fileID: 0}
 --- !u!1 &1333821660
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1045,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1416874852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416874853}
+  m_Layer: 0
+  m_Name: DamagePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416874853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416874852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.88, z: 0}
+  m_LocalScale: {x: 1, y: 0.91463, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7200807242280016119}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745139138
 GameObject:
@@ -1375,7 +1454,7 @@ MonoBehaviour:
     maxHealth: 100
     armor: 1
   currentHealth: 0
-  damageTransform: {fileID: 0}
+  damageTransform: {fileID: 1416874853}
 --- !u!54 &7200807242280016116
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1427,6 +1506,7 @@ Transform:
   m_Children:
   - {fileID: 7200807242812297701}
   - {fileID: 7249736101641968532}
+  - {fileID: 1416874853}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1445,6 +1525,7 @@ GameObject:
   - component: {fileID: 5471455219826059613}
   - component: {fileID: 8940278193998009671}
   - component: {fileID: 7200807242280016125}
+  - component: {fileID: 7200807242280016126}
   m_Layer: 0
   m_Name: Infantry
   m_TagString: Untagged
@@ -1486,6 +1567,23 @@ MonoBehaviour:
   enemyLayers:
   - Creep
   enemiesToAttack: []
+--- !u!114 &7200807242280016126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200807242280016123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad9d85f10591cd44a47ebc6553f46c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSound: splash-hit1
+  dieSound: 
+  damageEffects: {fileID: 3577498166441108409, guid: 416104e238f3e3a4782bb8574b6280df,
+    type: 3}
+  dieEffects: {fileID: 0}
 --- !u!65 &7200807242812297700
 BoxCollider:
   m_ObjectHideFlags: 0
