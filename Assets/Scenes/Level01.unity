@@ -882,6 +882,7 @@ GameObject:
   - component: {fileID: 1138072695}
   - component: {fileID: 1138072694}
   - component: {fileID: 1138072693}
+  - component: {fileID: 1138072697}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -962,6 +963,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1138072697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138072692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e217554d57a82c4e98c4e9ddf6a13be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eulersPerSecond: {x: 0, y: 0, z: 270}
 --- !u!1 &1333821660
 GameObject:
   m_ObjectHideFlags: 0
