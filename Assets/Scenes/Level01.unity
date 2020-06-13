@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 10526193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b3ad24a8a329584ea111d8b854c07c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 830439d5517d2f441b0e0f12334edac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   angularSpeed: 6
@@ -149,7 +149,7 @@ MonoBehaviour:
   ofenseStats:
     damage: 10
     attackSpeed: 1
-  attackRange: 6
+  attackRange: 5.5
   attackDelay: 0.5
   castTransform: {fileID: 59771447}
   enemyLayers:
@@ -190,7 +190,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 5.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &10526200
 Rigidbody:
@@ -1811,7 +1811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7200807242280016123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.79, y: 0, z: 6.18}
+  m_LocalPosition: {x: 24.53, y: 0, z: 6.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7200807242812297701}
