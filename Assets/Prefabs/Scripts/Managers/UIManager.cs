@@ -7,6 +7,7 @@ using NavGame.Managers;
 public class UIManager : MonoBehaviour
 {
     public GameObject[] cooldownObjects;
+    public Text[] actionsCost;
     Image[] cooldownImages;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,8 @@ public class UIManager : MonoBehaviour
         {
             cooldownImages[i] = cooldownObjects[i].GetComponent<Image>();
             cooldownImages[i].fillAmount = 0f;
+
+            actionsCost[i].text = "(" + LevelManager.instance.actions[i].cost + ")";
         }
     }
 
