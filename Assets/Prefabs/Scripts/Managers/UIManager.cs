@@ -7,7 +7,7 @@ using NavGame.Managers;
 public class UIManager : MonoBehaviour
 {
     public GameObject[] cooldownObjects;
-    public Text[] actionsCost;
+    public Text[] actionCosts;
     Image[] cooldownImages;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
         InitializeUI();
         LevelManager.instance.onActionSelect += OnActionSelect;
         LevelManager.instance.onActionCancel += OnActionCancel;
+        LevelManager.instance.onActionCooldownUpdate += OnActionCooldownUpdate;
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class UIManager : MonoBehaviour
             cooldownImages[i] = cooldownObjects[i].GetComponent<Image>();
             cooldownImages[i].fillAmount = 0f;
 
-            actionsCost[i].text = "(" + LevelManager.instance.actions[i].cost + ")";
+            actionCosts[i].text = "(" + LevelManager.instance.actions[i].cost + ")";
         }
     }
 
@@ -39,5 +40,12 @@ public class UIManager : MonoBehaviour
      void OnActionCancel(int actionIndex)
     {
         cooldownImages[actionIndex].fillAmount = 0f;
+    }
+
+    void OnActionCooldownUpdate(int actionIndex, float coolDown, float waitTime)
+    {
+        float percent = coolDown / waitTime;
+        cooldownImages[actionIndex].fillAmount = percent;
+
     }
 }

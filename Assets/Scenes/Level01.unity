@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 209420868}
   - component: {fileID: 209420867}
   m_Layer: 5
-  m_Name: VaultKey
+  m_Name: GeneratorKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 656269725}
   - component: {fileID: 656269724}
   m_Layer: 5
-  m_Name: VaultCD
+  m_Name: GeneratorCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 1207030813}
   - component: {fileID: 1207030812}
   m_Layer: 5
-  m_Name: VaultImage
+  m_Name: GeneratorImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 1454019455}
   - component: {fileID: 1454019454}
   m_Layer: 5
-  m_Name: Vault
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2364,7 +2364,7 @@ GameObject:
   - component: {fileID: 1581639968}
   - component: {fileID: 1581639967}
   m_Layer: 5
-  m_Name: VaultCost
+  m_Name: GeneratorCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2859,7 +2859,7 @@ MonoBehaviour:
   - {fileID: 1989023511}
   - {fileID: 1140691274}
   - {fileID: 656269722}
-  actionsCost:
+  actionCosts:
   - {fileID: 1653668100}
   - {fileID: 1233475691}
   - {fileID: 1581639967}
