@@ -6,6 +6,9 @@ using NavGame.Managers;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject errorPanel;
+    public Text errorText;
+    public float errorTime = 1.5f;
     public Text coinText;
     public GameObject[] cooldownObjects;
     public Text[] actionCosts;
@@ -17,6 +20,7 @@ public class UIManager : MonoBehaviour
         LevelManager.instance.onActionCancel += OnActionCancel;
         LevelManager.instance.onActionCooldownUpdate += OnActionCooldownUpdate;
         LevelManager.instance.onResourceUpdate += OnResourceUpdate;
+        LevelManager.instance.onReportableError += OnReportableError;
     }
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,7 @@ public class UIManager : MonoBehaviour
 
             actionCosts[i].text = "(" + LevelManager.instance.actions[i].cost + ")";
         }
+        errorPanel.SetActive(false);
     }
 
 
@@ -59,4 +64,18 @@ public class UIManager : MonoBehaviour
     {
         coinText.text = "X " + currentAmount;
     }
+    void OnReportableError(string message)
+    {
+        errorText.text = message;
+        errorPanel.SetActive(true);
+        StartCoroutine(TurnOffError());
+
+
+    }
+    IEnumerator TurnOffError()
+    {
+        yield return new WaitForSeconds(errorTime);
+        errorPanel.SetActive(false);
+    }
 }
+
