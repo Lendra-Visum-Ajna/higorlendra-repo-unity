@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     public Text errorText;
     public float errorTime = 1.5f;
     public Text coinText;
+    public Text waveCountText;
+    public Text waveCountdownText;
     public GameObject[] cooldownObjects;
     public Text[] actionCosts;
     Image[] cooldownImages;
@@ -21,6 +23,8 @@ public class UIManager : MonoBehaviour
         LevelManager.instance.onActionCooldownUpdate += OnActionCooldownUpdate;
         LevelManager.instance.onResourceUpdate += OnResourceUpdate;
         LevelManager.instance.onReportableError += OnReportableError;
+        LevelManager.instance.onWaveUpdate += OnWaveUpdate;
+        LevelManager.instance.onWaveCountdown += OnWaveCountdown;
     }
     // Start is called before the first frame update
     void Start()
@@ -71,6 +75,16 @@ public class UIManager : MonoBehaviour
         StartCoroutine(TurnOffError());
 
 
+    }
+
+
+    void OnWaveUpdate(int totalWaves, int currentWave)
+    {
+        waveCountText.text = currentWave + " / " + totalWaves;
+    }
+    void OnWaveCountdown(float remainingTime)
+    {
+        waveCountdownText.text = remainingTime.ToString("F1");
     }
     IEnumerator TurnOffError()
     {

@@ -3602,6 +3602,7 @@ MonoBehaviour:
   badPrefab: {fileID: 4146032458533408231, guid: dd38d4788b9289d4c9c5fb2d2ec62204,
     type: 3}
   badWaves: 3
+  monstersPerWave: 2
   waitTimeFirstWave: 2
   waitTimeBetweenWaves: 4
 --- !u!114 &1910549820
@@ -3620,6 +3621,7 @@ MonoBehaviour:
   errorText: {fileID: 1289562233}
   errorTime: 1.5
   coinText: {fileID: 1780880782}
+  waveCountText: {fileID: 1200145408}
   cooldownObjects:
   - {fileID: 1989023511}
   - {fileID: 1140691274}
